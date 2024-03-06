@@ -125,6 +125,7 @@ fi
 %config %{_sysconfdir}/spamdyke.conf
 # permissions (
 %attr(-, qmaild, qmail) %dir /var/qmail/spamdyke
+%exclude /var/qmail/spamdyke/[blacklist_senders|blacklist_recipients|blacklist_keywords|blacklist_ip|whitelist_rdns|whitelist_ip|whitelist_senders]
 %attr(-, qmaild, qmail) %dir /var/qmail/spamdyke/greylist
 %attr(0644, qmaild, qmail) %config(noreplace) /var/qmail/spamdyke/blacklist_senders
 %attr(0644, qmaild, qmail) %config(noreplace) /var/qmail/spamdyke/blacklist_recipients
